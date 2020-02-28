@@ -16,16 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    dot.cpp \
-    main.cpp \
-    piegame.cpp \
-    superitem.cpp
+    src/dot.cpp \
+    src/main.cpp \
+    src/piegame.cpp \
+    src/superitem.cpp
 
 HEADERS += \
-    dot.h \
-    piegame.h \
-    superitem.h \
-    utils.h
+    src/dot.h \
+    src/piegame.h \
+    src/superitem.h \
+    src/utils.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -33,4 +33,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    resource.qrc
+    src/resource.qrc
