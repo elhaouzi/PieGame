@@ -6,7 +6,7 @@
 class Dot: public QGraphicsItem
 {
 public:
-    explicit Dot(QGraphicsItem* parent = nullptr);
+    explicit Dot(QGraphicsItem* parent = Q_NULLPTR);
 
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
