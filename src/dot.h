@@ -7,6 +7,7 @@ class Dot: public QGraphicsItem
 {
 public:
     explicit Dot(QGraphicsItem* parent = Q_NULLPTR);
+    virtual ~Dot();
 
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,

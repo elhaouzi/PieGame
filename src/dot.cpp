@@ -4,11 +4,18 @@
 
 #include "utils.h"
 
+#include<QDebug>
+
 Dot::Dot(QGraphicsItem *parent)
     : QGraphicsItem(parent),
       m_eaten(false)
 {
 
+}
+
+Dot::~Dot()
+{
+    qDebug() <<"dot deleted";
 }
 
 void Dot::paint(QPainter *painter,
@@ -24,6 +31,9 @@ void Dot::paint(QPainter *painter,
     if(!m_eaten){
         painter->setBrush(Qt::white);
         painter->drawPixmap(5, 5, 25, 25, QPixmap(":/face.png"));
+    }else{
+        //if dot is eaten, delete it
+        delete this;
     }
 }
 
