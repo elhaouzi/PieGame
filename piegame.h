@@ -1,9 +1,10 @@
 #ifndef PIEGAME_H
 #define PIEGAME_H
 
-#include <QWidget>
+#include <QMainWindow>
 
-class PieGame : public QWidget
+
+class PieGame : public QMainWindow
 {
     Q_OBJECT
 
