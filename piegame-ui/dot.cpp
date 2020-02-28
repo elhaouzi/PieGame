@@ -29,7 +29,7 @@ void Dot::paint(QPainter *painter,
 
     if(!m_eaten){
         painter->setBrush(Qt::white);
-        painter->drawPixmap(5, 5, 25, 25, QPixmap(":/face.png"));
+        painter->drawPixmap(5, 5, 25, 25, QPixmap(":/images/face.png"));
     }else{
         //if dot is eaten, delete it
         delete this;
