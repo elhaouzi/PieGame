@@ -4,7 +4,6 @@
 
 #include "utils.h"
 
-#include<QDebug>
 
 Dot::Dot(QGraphicsItem *parent)
     : QGraphicsItem(parent),
@@ -15,7 +14,7 @@ Dot::Dot(QGraphicsItem *parent)
 
 Dot::~Dot()
 {
-    qDebug() <<"dot deleted";
+
 }
 
 void Dot::paint(QPainter *painter,
