@@ -14,7 +14,8 @@ protected:
                QWidget *widget = Q_NULLPTR) override;
     QRectF boundingRect() const override;
     virtual void keyPressEvent(QKeyEvent *event) override;
-
+private:
+    int m_rotation;
 };
 
 #endif // SUPERITEM_H
