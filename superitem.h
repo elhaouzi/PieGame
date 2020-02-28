@@ -3,11 +3,12 @@
 
 #include <QGraphicsItem>
 
+class QGraphicsView;
 
 class SuperItem : public QGraphicsItem
 {
 public:
-    explicit SuperItem(QGraphicsItem* parent = Q_NULLPTR);
+    explicit SuperItem(QGraphicsView* view, QGraphicsItem* parent = Q_NULLPTR);
 
 protected:
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option,
@@ -16,6 +17,7 @@ protected:
     virtual void keyPressEvent(QKeyEvent *event) override;
 private:
     int m_rotation;
+    QGraphicsView* m_view;
 };
 
 #endif // SUPERITEM_H

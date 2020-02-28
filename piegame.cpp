@@ -10,19 +10,20 @@
 PieGame::PieGame(QWidget *parent)
     : QMainWindow(parent)
 {
-    auto view = new QGraphicsView;
+    view = new QGraphicsView;
     auto scene = new QGraphicsScene(0, 0, 300, 300, view);
     view->setScene(scene);
 
     scene->setBackgroundBrush(Qt::black);
 
-    auto super = new SuperItem;
+    auto super = new SuperItem(view);
     scene->addItem(super);
 
     setCentralWidget(view);
 
     super->setFocus();
 
+    //add 100 faces
     for (auto i = 0; i< 10; ++i) {
         for (auto j = 0; j< 10; ++j) {
             auto dot = new Dot;
@@ -31,6 +32,9 @@ PieGame::PieGame(QWidget *parent)
         }
     }
 
+    //turn off scrollbar
+    view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
 
 PieGame::~PieGame()

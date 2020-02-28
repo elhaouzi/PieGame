@@ -24,7 +24,8 @@ SOURCES += \
 HEADERS += \
     dot.h \
     piegame.h \
-    superitem.h
+    superitem.h \
+    utils.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+class QGraphicsView;
 
 class PieGame : public QMainWindow
 {
@@ -11,5 +12,8 @@ class PieGame : public QMainWindow
 public:
     PieGame(QWidget *parent = Q_NULLPTR);
     ~PieGame();
+
+private:
+    QGraphicsView* view;
 };
 #endif // PIEGAME_H
