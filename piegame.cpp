@@ -19,6 +19,8 @@ PieGame::PieGame(QWidget *parent)
     scene->addItem(super);
 
     setCentralWidget(view);
+
+    super->setFocus();
 }
 
 PieGame::~PieGame()

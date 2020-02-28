@@ -6,7 +6,7 @@
 SuperItem::SuperItem(QGraphicsItem *parent)
     : QGraphicsItem(parent)
 {
-
+    setFlag(QGraphicsItem::ItemIsFocusable);
 }
 
 void SuperItem::paint(QPainter *painter,
@@ -26,5 +26,24 @@ QRectF SuperItem::boundingRect() const
 
 void SuperItem::keyPressEvent(QKeyEvent *event)
 {
+    switch (event->key()) {
+        case Qt::Key_Right: {
+            moveBy(30, 0);
+            break;
+        }
+        case Qt::Key_Left: {
+            moveBy(-30, 0);
+            break;
+        }
+        case Qt::Key_Up: {
+            moveBy(0, -30);
+            break;
+        }
+        case Qt::Key_Down: {
+            moveBy(0, 30);
+            break;
+        }
+        //update(); not neded, covred by rect in this item
+    }
 
 }
