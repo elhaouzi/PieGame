@@ -14,8 +14,7 @@ void SuperItem::paint(QPainter *painter,
                       QWidget *widget)
 {
     painter->setBrush(Qt::yellow);
-    painter->
-        drawRoundedRect(0, 0, 30, 30, 5, 5);
+    painter->drawPie(0, 0, 30, 30, -45*16, -270*16);
 
 }
 
